@@ -11,7 +11,7 @@ public class Przedmioty {
     );
 
     public static void wyswietlPrzedmioty() {
-        System.out.println("Dostępne przedmioty:");
+        System.out.println("\nDostępne przedmioty:");
         int i = 1;
         for (String przedmiot : lista) {
             System.out.println(i + ". " + przedmiot);
