@@ -29,7 +29,7 @@ public class OperacjeNaPlikach {
         }
     }
 
-    // Zwraca nowe unikalne ID na podstawie największego ID w pliku uczniowie.txt
+    // Zwraca nowe id na podstawie największego id w pliku
     public static int pobierzNoweIdUcznia() {
         int maxId = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(plik_uczniowie))) {
@@ -49,7 +49,7 @@ public class OperacjeNaPlikach {
         return maxId + 1;
     }
 
-    // Wyświetla wszystkie oceny danego ucznia na podstawie jego ID
+    // Wyświetla wszystkie oceny danego ucznia o wybranym Id
     public static void wyswietlOcenyUcznia(int uczenId) {
         System.out.println("Oceny ucznia ID: " + uczenId);
         if (!czyUczenIstnieje(uczenId)) {
@@ -74,7 +74,7 @@ public class OperacjeNaPlikach {
         }
     }
 
-    // Zapisuje nowego ucznia do pliku uczniowie.txt
+    // Zapisuje nowego ucznia do pliku
     public static void zapiszUczniaDoPliku(Uczen uczen) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(plik_uczniowie, true))) {
             writer.write(uczen.getId() + ";" + uczen.getImie() + ";" + uczen.getNazwisko());
@@ -84,7 +84,7 @@ public class OperacjeNaPlikach {
         }
     }
 
-    // Wyświetla wszystkich uczniów wczytanych z pliku uczniowie.txt
+    // Wyświetla wszystkich uczniów
     public static void wyswietlWszystkichUczniow() {
         List<Uczen> uczniowie = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(plik_uczniowie))) {
@@ -108,7 +108,7 @@ public class OperacjeNaPlikach {
             System.out.println(uczen);
         }
     }
-    // Sprawdza, czy uczeń o danym ID istnieje w pliku
+    // Sprawdza, czy uczeń o jakimś ID istnieje
     public static boolean czyUczenIstnieje(int uczenId) {
         try (BufferedReader reader = new BufferedReader(new FileReader(plik_uczniowie))) {
             String linia;
@@ -122,5 +122,34 @@ public class OperacjeNaPlikach {
             System.out.println("Błąd przy sprawdzaniu istnienia ucznia: " + e.getMessage());
         }
         return false;
+    }
+    //usuwanie ucznia
+    public static void usunUcznia(int id) {
+        List<Uczen> uczniowie = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(plik_uczniowie))) {
+            String linia;
+            while ((linia = reader.readLine()) != null) {
+                String[] dane = linia.split(";");
+                if (dane.length == 3) {
+                    int uczenId = Integer.parseInt(dane[0]);
+                    if (uczenId != id) {
+                        uczniowie.add(new Uczen(uczenId, dane[1], dane[2]));
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Błąd odczytu uczniów: " + e.getMessage());
+            return;
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(plik_uczniowie))) {
+            for (Uczen uczen : uczniowie) {
+                writer.write(uczen.getId() + ";" + uczen.getImie() + ";" + uczen.getNazwisko());
+                writer.newLine();
+            }
+            System.out.println("Uczeń o ID " + id + " został usunięty.");
+        } catch (IOException e) {
+            System.out.println("Błąd zapisu pliku: " + e.getMessage());
+        }
     }
 }
