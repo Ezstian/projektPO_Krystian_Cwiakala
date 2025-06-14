@@ -2,5 +2,3 @@
 1;Fizyka;3.0
 2;historia;4.0
 2;Fizyka;5.0
-3;Matematyka;0.0
-2;Fizyka;0.0
