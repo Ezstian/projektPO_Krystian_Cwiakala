@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 import java.util.Scanner;
 public class WyswietlUczniow{
     public static void menuUczniowie() {
@@ -16,8 +16,10 @@ public class WyswietlUczniow{
         switch(wybor){
             case 1:
             Przedmioty.wyswietlPrzedmioty();
+            menuUczniowie();
                 break;
             case 2:
+
                 break;
             case 5:
                 Menu.pokazmenu();
