@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Uczen  {
+    private static int ostatnieId = 0;
     private final ArrayList<Oceny> oceny;
     private String imie;
     private String nazwisko;
@@ -24,6 +25,10 @@ public class Uczen  {
     public String getIdUcznia() {
         return idUcznia;
     }
-
+    public static void ustawOstatnieId(int id) {
+        if (id > ostatnieId) {
+            ostatnieId = id;
+        }
+    }
 
 }

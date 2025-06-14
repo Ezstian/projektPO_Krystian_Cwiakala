@@ -10,10 +10,8 @@ public class Menu {
         System.out.println("=-=Elektroniczny system oceniania Zarządzanie wstawianiem i wyświetlaniem ocen cząstkowych z różnych przedmiotów=-=");
 
         // Wyświetlenie opcji menu
-        System.out.println("1. Wyswietl uczniow");
-        System.out.println("2. Zarzadzanie ocenami");
-        System.out.println("3. Wyswietl oceny");
-        System.out.println("4. ");
+        System.out.println("1. Menu Wyswietlania uczniow");
+        System.out.println("2. Menu Zarzadzania ocenami");
         System.out.println("5. Zakończ");
         System.out.print("------------------------------------------------------------------------------------------------------------------\n");
         System.out.print("Wybierz opcję: ");
@@ -30,6 +28,7 @@ public class Menu {
         // Obsługa wybranej opcji
         switch (wybor) {
             case 1:
+                WyswietlUczniow.menuUczniowie();
                 break;
             case 2:
                 break;
