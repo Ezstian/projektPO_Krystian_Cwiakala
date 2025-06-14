@@ -19,7 +19,6 @@ public class OperacjeNaPlikach {
             System.out.println("Ocena musi mieścić się w przedziale 1–6.");
             return;
         }
-
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(plik_oceny, true))) {
             writer.write(uczenId + ";" + przedmiot + ";" + wartosc);
             writer.newLine();

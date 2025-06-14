@@ -6,17 +6,18 @@ public class Menu {
 
         Scanner scanner = new Scanner(System.in);
         int wybor;
-        System.out.println("\n---------------------------------------------");
-        System.out.println("\nElektroniczny system oceniania Zarządzanie wstawianiem i wyświetlaniem ocen cząstkowych z różnych przedmiotów");
+        System.out.print("\n---------------------------------------------");
+        System.out.print("\nElektroniczny system oceniania Zarządzanie wstawianiem i wyświetlaniem ocen cząstkowych z różnych przedmiotów");
 
         // Wyświetlenie opcji menu
-        System.out.println("1.Lista wszystkich uczniow");
-        System.out.println("2.Dodaj ucznia");
-        System.out.println("3.Wyswietl oceny wybranego ucznia");
-        System.out.println("4.Wstaw ocene wybranemu uczniowi");
-        System.out.println("5.Zakończ");
-        System.out.println("\n---------------------------------------------");
-        System.out.println("\nWybierz opcję: ");
+        System.out.print("\n1.Lista wszystkich uczniow");
+        System.out.print("\n2.Dodaj ucznia");
+        System.out.print("\n3.Usun ucznia");
+        System.out.print("\n4.Wyswietl oceny wybranego ucznia");
+        System.out.print("\n5.Wstaw ocene wybranemu uczniowi");
+        System.out.print("\n6.Zakończ");
+        System.out.print("\n---------------------------------------------");
+        System.out.print("\nWybierz opcję: ");
 
         // Walidacja wejścia użytkownika
         while (!scanner.hasNextInt()) {
@@ -37,12 +38,16 @@ public class Menu {
                 pokazmenu();
                 break;
             case 3:
-                System.out.print("Podaj id ucznia: ");
+                UsunUcznia.usun();
+                pokazmenu();
+                break;
+            case 4:
+                System.out.print("Podaj ID ucznia: ");
                 int id = scanner.nextInt();
                 OperacjeNaPlikach.wyswietlOcenyUcznia(id);
                 pokazmenu();
                 break;
-            case 4:
+            case 5:
                 System.out.print("Podaj id ucznia: ");
                 int numer = scanner.nextInt();
                 System.out.print("Podaj przedmiot z listy: ");
@@ -53,7 +58,7 @@ public class Menu {
                 OperacjeNaPlikach.dodajOcene(numer,przedmiot,ocena);
                 pokazmenu();
                 break;
-            case 5:
+            case 6:
                 System.out.print("Zakonczono dzialanie programu.");
                 break;
             default:
