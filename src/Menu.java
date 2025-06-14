@@ -10,10 +10,10 @@ public class Menu {
         System.out.println("=-=Elektroniczny system oceniania Zarządzanie wstawianiem i wyświetlaniem ocen cząstkowych z różnych przedmiotów=-=");
 
         // Wyświetlenie opcji menu
-        System.out.println("1. Wyswietl");
-        System.out.println("2. Usuń ucznia");
-        System.out.println("3. Dodaj Ocene");
-        System.out.println("4. Wyswietl Uczniów");
+        System.out.println("1. Wyswietl uczniow");
+        System.out.println("2. Zarzadzanie ocenami");
+        System.out.println("3. Wyswietl oceny");
+        System.out.println("4. ");
         System.out.println("5. Zakończ");
         System.out.print("------------------------------------------------------------------------------------------------------------------\n");
         System.out.print("Wybierz opcję: ");
