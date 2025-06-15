@@ -7,15 +7,7 @@
 
 Projekt konsolowy w języku **Java**, umożliwiający nauczycielowi wstawianie ocen, generowanie statystyk, a uczniowi przegląd ocen.
 
-- dodawać nowych uczniów,
-- usuwać uczniów,
-- przypisywać oceny,
-- przeglądać listę uczniów,
-- wyświetlać oceny wybranego ucznia.
-
-Dane są zapisywane i odczytywane z plików tekstowych `uczniowie.txt` oraz `oceny.txt`.
-
-Uruchomienie projektu
+## Uruchomienie projektu
 
 1. Skompiluj projekt (np. w IntelliJ lub przez terminal).
 2. Uruchom klasę `Main`.
