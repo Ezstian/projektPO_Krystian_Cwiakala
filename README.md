@@ -5,7 +5,7 @@
 
 ## Opis programu
 
-Projekt konsolowy napisany w języku **Java**, umożliwiający zarządzanie ocenami uczniów z różnych przedmiotów. Program pozwala:
+Projekt konsolowy w języku **Java**, umożliwiający nauczycielowi wstawianie ocen, generowanie statystyk, a uczniowi przegląd ocen.
 
 - dodawać nowych uczniów,
 - usuwać uczniów,
@@ -15,26 +15,40 @@ Projekt konsolowy napisany w języku **Java**, umożliwiający zarządzanie ocen
 
 Dane są zapisywane i odczytywane z plików tekstowych `uczniowie.txt` oraz `oceny.txt`.
 
+Uruchomienie projektu
+
+1. Skompiluj projekt (np. w IntelliJ lub przez terminal).
+2. Uruchom klasę `Main`.
+3. Zaloguj się jako `Nauczyciel` (login: admin haslo: admin123) lub `Uczeń` (np. login: Kamil haslo: haslo) (dane w `loginy.txt`).
+4. Wybierz opcję z menu.
 
 ## Funkcjonalności
 
--  Wyświetlanie listy wszystkich uczniów
-- Dodawanie nowego ucznia
-- Usuwanie ucznia
--  Wstawianie ocen uczniowi
--  Wyświetlanie ocen wybranego ucznia
--  Obsługa plików tekstowych (`uczniowie.txt`, `oceny.txt`)
--  Proste menu tekstowe
+  Logowanie użytkownika
+- Rola **Nauczyciel**: może dodawać oceny i generować statystyki.
+- Rola **Uczeń**: może przeglądać tylko swoje oceny.
+
+  Oceny
+- Możliwość przypisywania ocen cząstkowych do konkretnego przedmiotu.
+- Oceny są zapisywane w pliku `oceny.txt`.
+
+  Statystyki
+- Obliczanie średnich ocen uczniów.
+
+ Pliki danych
+- `loginy.txt`: dane logowania (`login;haslo;rola;id`)
+- `oceny.txt`: oceny (`uczenId;przedmiot;ocena`)
+- `uczniowie.txt`: dane uczniów (`id;imie;nazwisko`)
+
 
 ## Struktura
--  Main
+- Main
 - Menu
-- DodajUcznia
+- Nauczyciel
 - OperacjeNaPlikach
-- Osoba
-- Przedmioty
+- Statystyki
+- Uzytkownik
 - Uczen
-- UsunUcznia
 
 
 ## Wymagania
