@@ -24,7 +24,7 @@ public class OperacjeNaPlikach {
             writer.newLine();
             System.out.println("Dodano ocenę.");
         } catch (IOException e) {
-            System.out.println("Błąd zapisu: " + e.getMessage());
+            System.out.println("Błąd zapisu. " + e.getMessage());
         }
     }
 
@@ -43,7 +43,7 @@ public class OperacjeNaPlikach {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Błąd podczas odczytu ID uczniów: " + e.getMessage());
+            System.out.println("Błąd podczas odczytu ID uczniów. " + e.getMessage());
         }
         return maxId + 1;
     }
@@ -52,7 +52,7 @@ public class OperacjeNaPlikach {
     public static void wyswietlOcenyUcznia(int uczenId) {
         System.out.println("Oceny ucznia ID: " + uczenId);
         if (!czyUczenIstnieje(uczenId)) {
-            System.out.println("Uczeń o podanym ID nie istnieje.");
+            System.out.println("Uczen o podanym ID nie istnieje.");
             return;
         }
         try (BufferedReader reader = new BufferedReader(new FileReader(plik_oceny))) {
@@ -69,7 +69,7 @@ public class OperacjeNaPlikach {
                 System.out.println("Brak ocen dla podanego ID ucznia.");
             }
         } catch (IOException e) {
-            System.out.println("Błąd odczytu: " + e.getMessage());
+            System.out.println("Blad odczytu. " + e.getMessage());
         }
     }
 
@@ -79,7 +79,7 @@ public class OperacjeNaPlikach {
             writer.write(uczen.getId() + ";" + uczen.getImie() + ";" + uczen.getNazwisko());
             writer.newLine();
         } catch (IOException e) {
-            System.out.println("Błąd zapisu ucznia: " + e.getMessage());
+            System.out.println("Blad zapisu ucznia. " + e.getMessage());
         }
     }
 
@@ -98,7 +98,7 @@ public class OperacjeNaPlikach {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Błąd odczytu uczniów: " + e.getMessage());
+            System.out.println("Błąd odczytu uczniów. " + e.getMessage());
             return;
         }
 
@@ -118,7 +118,7 @@ public class OperacjeNaPlikach {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Błąd przy sprawdzaniu istnienia ucznia: " + e.getMessage());
+            System.out.println("Błąd przy sprawdzaniu istnienia ucznia " + e.getMessage());
         }
         return false;
     }
