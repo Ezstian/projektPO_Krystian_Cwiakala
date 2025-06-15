@@ -34,7 +34,8 @@ public class Statystyki {
             return;
         }
 
-        System.out.println("\n Stzatystyki ucniów:");
+        System.out.println("\n--- Statystyki uczniów ---");
+
         for (Map.Entry<Integer, List<Double>> entry : ocenyMap.entrySet()) {
             int uczenId = entry.getKey();
             List<Double> oceny = entry.getValue();
@@ -42,5 +43,8 @@ public class Statystyki {
 
             System.out.printf("Uczeń ID: "+uczenId+"  Średnia ocen: "+srednia+" Liczba ocen: "+oceny.size()+"\n");
         }
+
+        double sredniaUczniow = sumaOcen / liczbaOcen;
+        System.out.printf("\nŚrednia ocen wszystkich uczniów:"+ sredniaUczniow);
     }
 }
