@@ -18,6 +18,6 @@ public class Main {
         }
 
         System.out.println("Zalogowano jako: " + uzytkownik.getRola());
-        Menu.uruchom(uzytkownik);
+        Menu.pokazmenu(uzytkownik);
     }
 }

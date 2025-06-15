@@ -5,10 +5,10 @@ public class Nauczyciel extends Uzytkownik {
 
     @Override
     public void pokazOpcje() {
-        System.out.println("1. Lista uczniów");
-        System.out.println("2. Wyświetl oceny ucznia");
-        System.out.println("3. Wstaw ocenę");
-        System.out.println("4. Statystyki");
-        System.out.println("5. Wyjście");
+        System.out.println("\n =-= Menu nauczyciela =-=");
+        System.out.println("1. Wyświetl oceny ucznia");
+        System.out.println("2. Dodaj ocenę");
+        System.out.println("3. Generuj statystyki");
+        System.out.println("4. Wyloguj");
     }
 }

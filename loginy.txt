@@ -1,0 +1,7 @@
+admin;admin123;Nauczyciel
+Kamil;haslo;Uczen;1
+Barbara;haslo;Uczen;2
+Jan;haslo;Uczen;3
+Roman;haslo;Uczen4
+Rabarbar;haslo;Uczen;5
+Kordian;haslo;Uczen;6

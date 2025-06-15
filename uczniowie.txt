@@ -1,6 +1,6 @@
 1;Kamil;Slimak
 2;Barbara;Karolak
 3;Jan;Rabarbar
-5;Roman;Giertych
-6;Rabarbar;Mięczyślad
-7;Kordian;Wallenrod
+4;Roman;Giertych
+5;Rabarbar;Mięczyślad
+6;Kordian;Wallenrod

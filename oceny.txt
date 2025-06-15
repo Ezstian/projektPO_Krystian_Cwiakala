@@ -3,3 +3,7 @@
 2;historia;4.0
 2;Fizyka;5.0
 2;Matematyka;3.0
+1;Fizyka;4.0
+1;Historia;4.0
+1;Informatyka;4.0
+3;Język polski;4.0
