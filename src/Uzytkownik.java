@@ -6,11 +6,6 @@ public abstract class Uzytkownik {
         this.login = login;
         this.rola = rola;
     }
-
-    public String getLogin() {
-        return login;
-    }
-
     public String getRola() {
         return rola;
     }
